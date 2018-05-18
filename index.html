@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<title>Personal Project Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/homepage.css">
+<link rel="stylesheet" href="css/page3.css">
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<link rel="stylesheet" href="css/main.css">
+
+<!--CSS in html-->
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:100%;">
+    <a href="#home" class="w3-bar-item w3-button">My Website</a>
+        <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small" style="letter-spacing:100%;">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      <a href="credit.html" class="w3-bar-item w3-button">Credit</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:100%;min-width:100%" id="home">
+    <div class="slideshow-container">
+      
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1</div>
+            <img src="photo/CU/14.jpg" style="width:100%">
+            <div class="text">Baiwai Photography</div>
+        </div>
+      
+        <div class="mySlides fade">
+            <div class="numbertext">2</div>
+            <img src="photo/KMUTNB/5.JPG" style="width:100%">
+            <div class="text">Baiwai Photography</div>
+        </div>
+      
+        <div class="mySlides fade">
+            <div class="numbertext">3</div>
+            <img src="photo/swu/1.JPG" style="width:100%">
+            <div class="text">Baiwai Photography</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4</div>
+          <img src="photo/KMUTNB/4.JPG" style="width:100%">
+          <div class="text">Baiwai Photography</div>
+        </div>
+     
+
+        <div class="mySlides fade">
+           <div class="numbertext">5</div>
+           <img src="photo/swu/2.JPG" style="width:100%">
+           <div class="text">Baiwai Photography</div>
+           
+        </div>
+       
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+
+      <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+ 
+  
+   
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:100%">
+    <hr>
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="photo/TRAVEL/photo page.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="100%" >
+    </div>
+     
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Personal Information</h1><br>
+      <h5 class="w3-center">Baiwai Photography</h5>
+      <p class="w3-large">My name is : Patpong Jamsai<br>
+                        Nick name : Baiwai <br>
+                        Birthday : 26 January 1996 <br>
+                        Address : 129/188, Chalongkrung Road, Lam Pla Tiew, Lat Krabang BANGKOK 10520 <br>
+                        Tel : 098-861-6981 <br>
+                        line : ppbaimhee <br>
+                        fb :<a href="https://www.facebook.com/profile.php?id=100008654380202"> Patpong Baiwai Jamsai </a> 
+     </p><br>
+     
+     <h1 class="w3-center">"การถ่ายภาพ ให้คุณมากกว่า แค่ภาพถ่าย"</h1><br>
+           <p class="w3-large w3-text-grey w3-hide-medium">
+          การถ่ายภาพช่วยให้เรากลายเป็นส่วนหนึ่งของชุมชนทั่วโลกได้
+             ต้องยอมรับว่าโลกออนไลน์ได้เข้ามามีบทบาทและกับชีวิตของเราอย่างมากในปัจจุบัน การถ่ายภาพลงในสื่อออนไลน์ต่างๆนั้นช่วยทำให้คุณสามารถบอกเล่าเรื่องราวของคุณให้กับคนทั้งโลกให้รับรู้ได้ หรือภาพในโลกออนไลน์ก็ทำให้คุณสามารถเปิดโลกทัศน์ เปิดมุมมองใหม่ได้ รวมถึงการสื่อสาร
+             พูดคุยกับผู้คนในโลกออนไลน์ที่จะทำให้โลกใบใหญ่ใบนี้แคบลงในทันใด โลกของคุณได้เปลี่ยนไปหลังจากที่คุณนั้นเริ่มถ่ายภาพ เพราะโลกจะแคบลง แต่ความรู้และมุมมองของคุณ จะกว้างขึ้น</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <center><h1>My All Gallery</h1></center>
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      
+       <h4><a href="swu.html"> SWU</a></h4>
+      <p class="w3-text-grey" >Srinakharinwirot University</p>
+      <a href="swu.html"><img src="photo/swu/1.JPG" width="100%" height="100%"></a>
+
+      <h4><a href="kmutnb.html">KMUTNB</a></h4>
+     <p class="w3-text-grey" >King Mongkut's University of Technology North Bangkok</p>
+     <a href="kmutnb.html"><img src="photo/KMUTNB/5.JPG" width="100%" height="100%"></a> 
+
+     <h4><a href="kmitl.html">KMITL</a></h4>
+     <p class="w3-text-grey">King Mongkut's Institute of Technology Ladkrabang </p>
+     <a href="kmitl.html"><img src="photo/KMITL/1.jpg" width="100%" height="100%"></a>
+
+       <h4><a href="su.html">SU</a></h4>
+       <p class="w3-text-grey">Silapakorn University</p>
+       <a href="su.html"><img src="photo/SU/3.jpg" width="100%" height="100%"></a>
+
+         <h4><a href="cu.html">CU</a></h4>
+         <p class="w3-text-grey">Chulalongkorn University</p>
+         <a href="cu.html"><img src="photo/CU/14.jpg" width="100%" height="100%"></a>
+   </div>
+   
+   <div class="w3-col l6 w3-padding-large">
+    
+     <h4><a href="hcu.html">HCU</a></h4>
+      <p class="w3-text-grey" >Huachiew Chalermprakiet University</p>
+      <a href="hcu.html"><img src="photo/HCU/14.jpg" width="100%" height="100%"></a>
+
+     <h4><a href="kmitl2.html">KMITL2</a></h4>
+     <p class="w3-text-grey" >King Mongkut's University of Technology North Bangkok</p>
+       <a href="kmitl2.html"><img src="photo/KMITL2/4.jpg" width="100%" height="100%"></a>
+
+       
+     <h4><a href="ru.html">RU</a></h4>
+     <p class="w3-text-grey">Ramkhamhaeng University</p>
+     <a href="ru.html"><img src="photo/RU/3.JPG" width="100%" height="100%"></a> 
+   
+     <h4><a href="kbu.html">KBU</a></h4>
+     <p class="w3-text-grey">Kasem Bundit University</p>
+     <a href="kbu.html"><img src="photo/KBU/1.jpg" width="100%" height="100%"></a>
+   
+    <h4><a href="dong.html">Ordination Dong</a></h4>
+     <p class="w3-text-grey">งานอุปสมบท พระโด่ง</p> 
+     <a href="dong.html"><img src="photo/Dong/4.jpg" width="100%" height="100%"></a>
+    </div>
+  </div>
+
+
+  <hr>
+
+ <!-- Contact Section -->
+ <div class="w3-container w3-padding-64" id="contact">
+    <h1>Contact</h1><br>
+    <h3>Event </h3>
+    <p>We offer full-service catering for any event, large or small. We understand your needs and Do not hesitate to contact us.</p>
+    <p class="w3-text-blue-grey w3-large"><b>Facebook : Patpong Baiwai Jamsai, 129/188, Chalongkrung Road, Lam Pla Tiew, Lat Krabang BANGKOK 10520</b></p>
+    <p>You can also contact us by phone 098-8616981 or email 58030198@kmitl.ac.th, or you can send us a message here:</p>
+     </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<div>
+<footer class="w3-container w3-padding-16 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://www.facebook.com/profile.php?id=100008654380202" title="" target="_blank" class="w3-hover-text-green">Patpong</a></p>
+</footer>
+</div>
+</body>
+</html>
+
